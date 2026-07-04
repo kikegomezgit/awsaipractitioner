@@ -149,8 +149,8 @@ Aws Augmented AI(AAI) -> Built in Human Review workflows
 AWS Quicksight -> graphs from data and analysis for interactive dashboards -> SPICE(super fast, parallel, in memory calculation engine)
 Azure Machine Learning === sagemaker
 
-
-
+Artificial intelligence -> Learns from data then make predictions
+Generative AI->Creates new solutions based on learned data
 
 
 
@@ -169,7 +169,7 @@ Azure Machine Learning === sagemaker
 To dos before monday
 
 Agno - playbook simple of tickets, orders and customerdbs
-front- move to advanced the force only consult on
+
 
 
 
