@@ -148,14 +148,34 @@ Aws Glue(preprocessing-transform) ->Databrew(data visualization and transformati
 Aws Augmented AI(AAI) -> Built in Human Review workflows
 AWS Quicksight -> graphs from data and analysis for interactive dashboards -> SPICE(super fast, parallel, in memory calculation engine)
 Azure Machine Learning === sagemaker
+Aws Titan-> aws house model
+
 
 Artificial intelligence -> Learns from data then make predictions
-Generative AI->Creates new solutions based on learned data
+Generative AI->Creates new solutions(code,text,images) based on learned data
 
 
+General AI concepts ---
+Context windows -> memory span available when its generating text and portion of input data that a model process at time
+transformer network-> neural network arch to process input in parallel
+tokens-> smallest unit of data(words)
+tokenization->process of breaking down input to tokens
+Embedding-> numeric representations of words or phrases that capture their meaning
+Vectors->Ordered lists of numbers that represent data features
+Chunking->Used to handle large amounts of data by breaking it down into smaller, more manageable pieces called chunks, important to choose the right chunk size for precision 
+LLMS(Large language models) -> generative AI models trained
+Prompt-> input given to the model
+techniques:
+	Zero-shot learning-> no data trained
+	One-Shot learning->one example
+	few-shot learning-> learn from few examples and can recognize new instances
+multimodal models-> can handle videos,text,images
+diffusion models->can only handle images,audio,video
 
-
-
+behind Generative AI
+GAN->generative adversarial network
+VAE->variational autoencoder
+transformers
 
 
 
