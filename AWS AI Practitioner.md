@@ -120,8 +120,8 @@ Demonstrates compliance with regulations
 
 Aws services------------------
 AWS CloudFormation === Terraform(IAS)
-Bedrock -> Managed service for Generative AI for models-> 
-Sagemaker(any kind of AI except generative) -> custom LLM and training ->
+Aws Bedrock -> Managed service for Generative AI for models and hosting-> 
+Aws Sagemaker(any kind of AI except generative) -> custom LLM and training ->
  automated resource management, algorithm and framework support
 hyperparameter tuning -> automatic model tuning (amt)-> auto optimize models by running multiple training jobs
 built in tools evaluate models and track performance against business metrics
@@ -149,8 +149,15 @@ Aws Augmented AI(AAI) -> Built in Human Review workflows
 AWS Quicksight -> graphs from data and analysis for interactive dashboards -> SPICE(super fast, parallel, in memory calculation engine)
 Azure Machine Learning === sagemaker
 Aws Titan-> aws house model
+Aws PartyRock -> Amazon Bedrock Playground for generative AI
+Aws Amazon Q-> Advanced querying with AI
+Aws Inferentia->optimized for ML. faster inference performance with lower latency
+Aws Trainium->training machine learning models
+Aws kendra -> Vector database semantic search
+Aws OpenSearch -> managed service for vector databases
 
 
+On demand vs reserved instances
 Artificial intelligence -> Learns from data then make predictions
 Generative AI->Creates new solutions(code,text,images) based on learned data
 
@@ -177,19 +184,47 @@ GAN->generative adversarial network
 VAE->variational autoencoder
 transformers
 
+Foundational Model{GPT-4}
+fine-tuning-> identify recurring tasks-gather preferences-understand business needs
+ROUGE->evaluates summarization quality
+BLEU-> assesses transalation
+kinds of models-> VAES[unsupervised learning], GANS[generating images], Autoregressive models[sequential tasks]
+AI metrics->Accuracy-efficiency-conversion rate
+
+Training techniques--
+to reduce bias-> data autmentation, fariness tools
+Ethical AI
+
+Inference Parameters---
+Temperature->lower predictable and focused, higher diverse and more creative
+Top-K-> 5-fewer words, -50 wider range of words
+Top-P->limits word choice to more certain options, expands word choices to include more possibilities adding creativity
 
 
+Python ML frameworks->
+Tensorflow Hub, Pytorch Hub, Hugghing face
+Interpretability-> Simple models like linear regression
+--important to understand thinking ->Explainability->Methods for understanding complex models--
+LIME
+SHAP->https://shap.readthedocs.io/en/latest/example_notebooks/overviews/An%20introduction%20to%20explainable%20AI%20with%20Shapley%20values.html
 
+Real time decision-making -> KNN Model
+Modal->Type of input data a model can process
+architecture of a model
+CNN(convolutional neural networks)->Image recognition
+RNN(Recurrent neural networks)-> natural language processing tasks
+Performance metrics
+Accuracy - Precision(consistent) - Recall(false positives and false positives) - F1 Score
 
-
-
+vector databases store data as embeddings, wich are numerical representations of data like text and images
 
 
 
 To dos before monday
 
-Agno - playbook simple of tickets, orders and customerdbs
-
+Agno - 
+* check differences with gpt-5.4-nano vs gpt-5.4-mini on performance on fine-tunning
+playbook simple of tickets, orders and customerdbs
 
 
 
