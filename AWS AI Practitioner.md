@@ -121,7 +121,7 @@ Demonstrates compliance with regulations
 Aws services------------------
 AWS CloudFormation === Terraform(IAS)
 Aws Bedrock -> Managed service for Generative AI for models and hosting-> 
-Aws Sagemaker(any kind of AI except generative) -> custom LLM and training ->
+Aws Sagemaker(any kind of AI except generative) -> custom LLM and training -> clarify(detect bias and disparities)explainability
  automated resource management, algorithm and framework support
 hyperparameter tuning -> automatic model tuning (amt)-> auto optimize models by running multiple training jobs
 built in tools evaluate models and track performance against business metrics
@@ -155,6 +155,10 @@ Aws Inferentia->optimized for ML. faster inference performance with lower latenc
 Aws Trainium->training machine learning models
 Aws kendra -> Vector database semantic search
 Aws OpenSearch -> managed service for vector databases
+Aws Aurora and Aws RDS for postgresql pgvector
+Aws Neptune ML->Graph neural networks(GNNs) enhance predictions using complex graph relationships
+
+
 
 
 On demand vs reserved instances
@@ -186,19 +190,28 @@ transformers
 
 Foundational Model{GPT-4}
 fine-tuning-> identify recurring tasks-gather preferences-understand business needs
-ROUGE->evaluates summarization quality
-BLEU-> assesses transalation
+ROUGE(recall-oriented understudy for gisting evaluation)->evaluates summarization quality
+BLEU(bilingual evaluation understudy)-> assesses machine transalation
+GLUE(General language understanding evaluation)->natural language tasks for model evaluation, tasks include sentiment analysis, question answering and more
+superGLUE->multi
+MMLU(massive multitask language understanding)->evaluates models knowledge and problem-solving ability across multiple subjects
+Big-bench(beyond the imitation game benchmark)->focus on tasks beyond current LLM capabilities, tasks includes math, biology,reasoning, software development and bias detection
+HELM(holistic evaluation of language models)->improving model transparency, evaluates tasks such summarization, question answering,sentiment analysis and bias detection
 kinds of models-> VAES[unsupervised learning], GANS[generating images], Autoregressive models[sequential tasks]
 AI metrics->Accuracy-efficiency-conversion rate
 
 Training techniques--
 to reduce bias-> data autmentation, fariness tools
 Ethical AI
-
+inside Foundational model ----
 Inference Parameters---
 Temperature->lower predictable and focused, higher diverse and more creative
 Top-K-> 5-fewer words, -50 wider range of words
 Top-P->limits word choice to more certain options, expands word choices to include more possibilities adding creativity
+-----------------------------------
+In context Learning
+
+
 
 
 Python ML frameworks->
@@ -216,20 +229,143 @@ RNN(Recurrent neural networks)-> natural language processing tasks
 Performance metrics
 Accuracy - Precision(consistent) - Recall(false positives and false positives) - F1 Score
 
-vector databases store data as embeddings, wich are numerical representations of data like text and images
+vector databases store data as embeddings, wich are numerical representations of data like text and images to be searched on a semantic search
+search strategies -> k-nearest neighbors (k-NN) for efficient vector queries
+Storing Techniques---------
+Graph DB = Relationships
+Vector DB = Meaning
+
+Store things that need semantic search:
+Ticket descriptions
+Comments
+Logs
+Stack traces
+Documentation
+Runbooks
+
+Example:
+Ticket:
+"Checkout timeout after deployment"
+Embedding
+↓
+Finds
+"Checkout API hangs after release"
+even though the wording is different.
+
+Multi-step tasks-----------------------------------------
+
+** Agent[single narrow-broad expertise][orchestrate](agno,langchain) ->uses Foundational model(gpt-5-mini)->that uses RAG(tickets,wikis-all vectorized),MCPs(general purpose functions)
+Agno(self-managed decitions)
+Langchain(workflows defined A → B → C → D)
+                    User
+                      │
+                      ▼
+        Agent (Agno / LangGraph)
+      (orchestration + memory + state)
+                      │
+      ┌───────────────┼────────────────┐
+      │               │                │
+      ▼               ▼                ▼
+ Foundation LLM      RAG             MCP Tools
+ (GPT-5 Mini)   (Knowledge)      (Functions/APIs)
+      │               │                │
+      │         Tickets              SQL
+      │         Wikis                OMS
+      │         SOPs                 Cart Services
+      │         Docs                 Payments
+      │         FAQs                 Inventory
+      │
+      └───────────────┬────────────────┘
+                      ▼
+              Final Response
 
 
 
-To dos before monday
+** prompting----
+
+task/instruction-> write a product description for a ...
+context-> focus on ...
+negative prompt-> do not include..
+
+model latent space-> stores the knowledge a model learns during training
+
+zero-shot prompting->prompt
+few-shot prompting->prompt + examples
+chain of thought prompting->breaks down reasoning processes into intermmediate steps(transparency and explainability)
+prompt templates->predefined instructions(skills)
+
+prompt-tuning->fine-tunes the model by optimizing the prompt continuous embedding during training
+
+
+Guardrails in Prompt Engineering----
+block specific words
+threshold for filtering harmful content
+protect against prompt injections
+
+Fine-Tuning----
+improves model performance for specific tasks
+balance fine-tuning between tasks
+fine-tuning->task-specific learning with labeled examples
+pre-training->general-purpose learning from unstructured data
+Parameter-Efficient Fine-Tuning (PEFT)--
+Freeze most parameters
+Fine-tune small layers
+Techniques : 
+LoRA(Low-Rank Adaptation)->Freezes original weights except for low-rank weights, adds trainable low-rank matrices
+ReFT(Rpresentation Fine-tuning)->modified model representations rather than weights
+multi-task-fine tuning
+Domain-Specific Fine-tuning
+Reinforcement learning from human feedback(RLHF)
+
+
+Evualuating Foundation Model Performance ----
+
+
+**Responsible AI------
+Fairness-> bias, where a data has a distinct group but shouldnt look at it
+Explainability->why the decition
+Robustness->handle unexpected circumstances without crashing or hallucinating
+Privacy and security->protect user data and prevent exposure of personally identifiable information (PII)
+Governance->meeting industry standards and legal compliance requirements, risk stimation and mitigation
+Transparency->provide clear information about capabilities and risks
+Address bias and variance->demographic disparities and unqeual treatments
+
+
+
+
+
+
+To dos 
 
 Agno - 
-* check differences with gpt-5.4-nano vs gpt-5.4-mini on performance on fine-tunning
+<!-- * check differences with gpt-5.4-nano vs gpt-5.4-mini on performance on fine-tunning -->
 playbook simple of tickets, orders and customerdbs
 
+Check how can i use the large datasets we have on DWH on ecommerce for training
+
+check how to access comme logs on an efficient way
+
+In context Learning
+
+Subscriptions knowledge search to then investigate logs(ftp)
+
+Session in prompting
+
+Safety and Responsible use of data ISO
+
+Add Role-based-permission to execute x actions(devs only can execute modify)
+
+explore minimax on foundry throught fireworks AI 
+https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/aoai/
+
+That means if you invoke MiniMax through Microsoft AI Foundry Serverless, your data is handled under Azure's data processing commitments rather than being sent directly to MiniMax's own cloud.
+If Microsoft states that prompts are not shared with the publisher, that significantly reduces one of the common enterprise concerns.
+From a procurement and governance perspective:
+Some organizations have policies that prohibit or restrict the use of AI models developed by companies headquartered in certain countries, regardless of where inference is hosted.
+Others permit them after a security and legal review.
+Many private companies focus on Microsoft's contractual guarantees rather than the model developer's country of origin.
 
 
-
-
-
-
-
+logs comme a 
+Option 1: The Open-Source Way – Grafana Loki (Recommended)(Azure blob storage)
+Option 2: Azure table storage(2 index)
