@@ -120,9 +120,12 @@ Demonstrates compliance with regulations
 
 Aws services------------------
 AWS CloudFormation === Terraform(IAS)
-Aws Bedrock -> Managed service for Generative AI for models and hosting-> 
+Aws Bedrock -> Managed service for Generative AI for models and hosting-> Guardrails to filter inappropiate content
 Aws Sagemaker(any kind of AI except generative) -> custom LLM and training -> clarify(detect bias and disparities)explainability
- automated resource management, algorithm and framework support
+ automated resource management, algorithm and framework support, data wrangler(clean and balance data to prevent bias, data augmentation)
+import data->clean data->augment data->export data
+
+
 hyperparameter tuning -> automatic model tuning (amt)-> auto optimize models by running multiple training jobs
 built in tools evaluate models and track performance against business metrics
 monitor throught model monitor and amazon cloudwatch
@@ -318,7 +321,18 @@ Domain-Specific Fine-tuning
 Reinforcement learning from human feedback(RLHF)
 
 
+Data privacy and security risks
+PII data sensitive information may appear in model outputs unintentionally
+
+
+
 Evualuating Foundation Model Performance ----
+
+
+Legal risks in gen ai------
+Offensive and inappropiate AI outputs
+content guardrails
+
 
 
 **Responsible AI------
