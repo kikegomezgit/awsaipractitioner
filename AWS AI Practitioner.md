@@ -1,4 +1,4 @@
-AWS AI Practitioner
+AWS Certified AI Practitioner (AIF-C01)
 
 Concepts
 
@@ -160,7 +160,7 @@ Aws kendra -> Vector database semantic search
 Aws OpenSearch -> managed service for vector databases
 Aws Aurora and Aws RDS for postgresql pgvector
 Aws Neptune ML->Graph neural networks(GNNs) enhance predictions using complex graph relationships
-
+Aws A21-> human review of AI predictions->handling low-confidence inferences and randoms audits
 
 
 
@@ -318,8 +318,8 @@ LoRA(Low-Rank Adaptation)->Freezes original weights except for low-rank weights,
 ReFT(Rpresentation Fine-tuning)->modified model representations rather than weights
 multi-task-fine tuning
 Domain-Specific Fine-tuning
-Reinforcement learning from human feedback(RLHF)
-
+**Reinforcement learning from human feedback(RLHF)
+https://drive.google.com/file/d/1mFFGOc1cWyQ469kVjUx-wiQ6fJvNcL_V/view?usp=drive_link
 
 Data privacy and security risks
 PII data sensitive information may appear in model outputs unintentionally
@@ -345,14 +345,36 @@ Transparency->provide clear information about capabilities and risks
 Address bias and variance->demographic disparities and unqeual treatments
 
 
+**Data curation for balanced datasets----
+labeling-cleaning-augmenting-balancing
+choose relevant informormation for training
+periodically check datasets for bias
+ensure ongoing fairness and accountability
+
+interpretability->simple models with clear rules
+explainability->complex models viewed as black boxes
+open-source AI - Enhancing Transparency projects->transparency and safety
+partial dependence plots
+
+
+Human-Centered Design(HCD)- Importance
 
 
 
+- ------------------------------------------------------------------------------------------------------------------------
 
-To dos 
+To dos identify must haves / nice to haves to accomplish a Goal, and who is the target user?(Support L2 and Devs)
+consultation then execute actions(modify)
+support L2 only consult , Devs can consult and execute
 
-Agno - 
-<!-- * check differences with gpt-5.4-nano vs gpt-5.4-mini on performance on fine-tunning -->
+Pipelines on azure containers for self deployment
+
+security and error handling
+
+DEV keys on all and azure PAT and board
+
+bugs terminology on organization means something different because they are attached to a parent HU, we need to create a new "issue" card
+
 playbook simple of tickets, orders and customerdbs
 
 Check how can i use the large datasets we have on DWH on ecommerce for training
@@ -367,7 +389,16 @@ Session in prompting
 
 Safety and Responsible use of data ISO
 
-Add Role-based-permission to execute x actions(devs only can execute modify)
+documentar palabras clave busqueda para guardar solucion de un ticket : resolucion o solucion
+
+Add Role-based-permission to execute x actions(devs only can execute modify) on Agno and mcp server being fed by front the role and jwt
+{
+  "tool": "refund_order",
+  "required_roles": [
+    "manager",
+    "admin"
+  ]
+}
 
 explore minimax on foundry throught fireworks AI 
 https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/aoai/
