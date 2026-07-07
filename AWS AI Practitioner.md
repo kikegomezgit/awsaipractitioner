@@ -360,6 +360,12 @@ partial dependence plots
 Human-Centered Design(HCD)- Importance
 
 
+input/output schema
+separar comme/cart services
+
+tickets
+codigo
+logs
 
 - ------------------------------------------------------------------------------------------------------------------------
 
@@ -367,7 +373,13 @@ To dos identify must haves / nice to haves to accomplish a Goal, and who is the 
 consultation then execute actions(modify)
 support L2 only consult , Devs can consult and execute
 
-Pipelines on azure containers for self deployment
+cart services and payments mcp actions/functions
+decision_guide.json and business_glossary.json
+
+
+
+
+
 
 security and error handling
 
