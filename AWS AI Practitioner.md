@@ -360,8 +360,52 @@ partial dependence plots
 Human-Centered Design(HCD)- Importance
 
 
-input/output schema
-separar comme/cart services
+IAM Policies and Permissions------
+policies define permissions for resources
+JSON-based, enabling least privilege access
+root access has access to all resources
+IAM Groups for efficient permission management-> create multiple groups with shared policies
+on Sagemaker role manager for ml permissions groups -> data scientist, MLops and Compute
+on a Load balancer can be set up to encrypt/decrypt https request with TLS
+all AWS service endpoints supports TLS for secure https connections
+Virtual Private Cloud(VPC)->allow to make endpoints private travel throught a private subnet
+enhanced security by controlling network traffic with security groups,network access lists and firewalls
+
+Aws CloudTrail->Activity Logging and auditing
+Aws Key management service(KMS)->manage encryption keys tls tsl
+Aws PrivateLink
+
+
+Machine LEarning - Need for tracking artifacts------
+
+Source codes
+datasets
+container images
+model versions for reproducibility
+sagemaker model registry for model versioning includes metrics and hyperparameters
+Sagemaker Model Cards->Intended uses, risk assessments, training details, evaluation Results[compliance and transparency]
+Sagemaker Lineage-> tracking of the lineage of the machine learning workflow
+Sagemaker Feature Store->centralized store for reeusable ML features
+
+
+**Secure data Engineering---------------
+network security configuration
+access control implementation
+data privacy assurance
+data integrity verification
+
+Aws Virtual Private Cloud
+Aws Macie
+Aws Sagemaker
+
+vpc-> private/public subnet->network access control list-> security group instance
+VPC-Only mode for Sagemaker->restric all network traffic to the vpc, prevents access to public endpoints, enhances security by using private connections for resources
+
+
+
+
+
+
 
 tickets
 codigo
@@ -379,6 +423,10 @@ decision_guide.json and business_glossary.json
 
 
 
+
+generate knowledges md from code sources agents and implement OKF
+instaleap, oms, vtex
+subscriptions
 
 
 security and error handling
