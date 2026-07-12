@@ -395,15 +395,23 @@ data privacy assurance
 data integrity verification
 
 Aws Virtual Private Cloud
-Aws Macie
+Aws Macie-> Notifies users of detected PII in data sources, enabling propmt removal and improving data privacy
 Aws Sagemaker
 
 vpc-> private/public subnet->network access control list-> security group instance
 VPC-Only mode for Sagemaker->restric all network traffic to the vpc, prevents access to public endpoints, enhances security by using private connections for resources
 
+Remove PII during training 
+Assessing data quality->accuracy-completeness-relevance
+data cleaning and preprocessing->removing errors-handling missing values-formatting data
 
+least-privilege permissions
 
-
+AI Security-------------
+Data poisoning->manipulated data
+model inversion and reverse engineering threats->attackers can infer training data by repeatedly queryng the model and reverse engineering creates a model with similar behaviour
+prompt injection
+model monitor->detect performance drift to identify potential attacks or data quality issues(this can be done with Aws Cloudwatch)
 
 
 
