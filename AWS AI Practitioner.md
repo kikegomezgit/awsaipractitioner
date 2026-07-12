@@ -413,72 +413,14 @@ model inversion and reverse engineering threats->attackers can infer training da
 prompt injection
 model monitor->detect performance drift to identify potential attacks or data quality issues(this can be done with Aws Cloudwatch)
 
+NIST AI Risk Management Framework(RMF)-> establish AI governance structure, identify AI-related risks, assess and quantify risks, implement control and monitor
 
+transparency-> interpretability and explainability and accountability
 
-tickets
-codigo
-logs
+black box->input/output only- hidden processing
+interpretable-> transparent steps- internal understanding-traceability
 
-- ------------------------------------------------------------------------------------------------------------------------
-
-To dos identify must haves / nice to haves to accomplish a Goal, and who is the target user?(Support L2 and Devs)
-consultation then execute actions(modify)
-support L2 only consult , Devs can consult and execute
-
-cart services and payments mcp actions/functions
-decision_guide.json and business_glossary.json
-
-
-
-
-
-generate knowledges md from code sources agents and implement OKF
-instaleap, oms, vtex
-subscriptions
-
-
-security and error handling
-
-DEV keys on all and azure PAT and board
-
-bugs terminology on organization means something different because they are attached to a parent HU, we need to create a new "issue" card
-
-playbook simple of tickets, orders and customerdbs
-
-Check how can i use the large datasets we have on DWH on ecommerce for training
-
-check how to access comme logs on an efficient way
-
-In context Learning
-
-Subscriptions knowledge search to then investigate logs(ftp)
-
-Session in prompting
-
-Safety and Responsible use of data ISO
-
-documentar palabras clave busqueda para guardar solucion de un ticket : resolucion o solucion
-
-Add Role-based-permission to execute x actions(devs only can execute modify) on Agno and mcp server being fed by front the role and jwt
-{
-  "tool": "refund_order",
-  "required_roles": [
-    "manager",
-    "admin"
-  ]
-}
-
-explore minimax on foundry throught fireworks AI 
-https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/aoai/
-
-That means if you invoke MiniMax through Microsoft AI Foundry Serverless, your data is handled under Azure's data processing commitments rather than being sent directly to MiniMax's own cloud.
-If Microsoft states that prompts are not shared with the publisher, that significantly reduces one of the common enterprise concerns.
-From a procurement and governance perspective:
-Some organizations have policies that prohibit or restrict the use of AI models developed by companies headquartered in certain countries, regardless of where inference is hosted.
-Others permit them after a security and legal review.
-Many private companies focus on Microsoft's contractual guarantees rather than the model developer's country of origin.
-
-
-logs comme a 
-Option 1: The Open-Source Way – Grafana Loki (Recommended)(Azure blob storage)
-Option 2: Azure table storage(2 index)
+ISO 42001->manage AI-specific risks, ensure transparency, and maintain continuous improvement throughout the AI lifecycle
+EU AI Act->risk-based approach to regulate AI systems within the European Union
+NIST RMF
+Algorithmic Accountability Act
